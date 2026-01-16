@@ -22,20 +22,14 @@ function AddonMode:InitGameMode()
 	GameRules:GetGameModeEntity():SetCustomXPRequiredToReachNextLevel( HeroExpTable )
 
 	ListenToGameEvent('entity_killed', Dynamic_Wrap( self, 'KillEntity'), self)
-
-
-
-	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 2 )
+	ListenToGameEvent('game_rules_state_change', Dynamic_Wrap( self, 'AddonModeStateChange'), self) --не трогать!!!
 end
 
--- Evaluate the state of the game
-function AddonMode:OnThink()
-	if GameRules:State_Get() == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
-		--print( "Template addon script is running." )
-	elseif GameRules:State_Get() >= DOTA_GAMERULES_STATE_POST_GAME then
-		return nil
+function AddonMode:AddonModeStateChange(data) --проверяет State-время в игре и если сейчас 0-начало игры то AddonModeState-можеш использовать его например чтобы волны крипов начились когда пробивает гонг тоесть в 00:00
+	local newState = GameRules:State_Get()
+	if newState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
+		AddonMode:AddonModeState()
 	end
-	return 1
 end
 
 function AddonMode:KillEntity(data)
@@ -48,4 +42,8 @@ function AddonMode:KillEntity(data)
 		GameRules:SetGameWinner(DOTA_TEAM_GOODGUYS)
 	end
   print(killed_unit:GetUnitName())
+end
+
+function AddonMode:AddonModeState() --не трогай мне надо для вида в консоли!
+	print('пошла возня!')
 end
