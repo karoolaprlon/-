@@ -1,0 +1,164 @@
+// Dota Heroes File
+"DOTAAbilities"
+{
+    "Version"       "1"
+
+	"axe_counter_helix"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilitySound"					"Hero_Axe.CounterHelix"
+		"AbilityTextureName"           "avpp"
+        "HasScepterUpgrade"               "1"
+		"IsBreakable"					"1"
+		
+			
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"damage"
+			{
+				"value"				"100 200 300 400"
+				"special_bonus_unique_axe_4" "+40"
+			}
+			"radius"					
+			{
+				"value"						"275"
+				"affected_by_aoe_increase"	"1"
+			}
+			"trigger_attacks"			"5 4 2 1"
+
+			"AbilityCooldown"
+			{
+				"value"					"0.3"
+				"special_bonus_scepter"	"-0.3"
+			}
+			
+			"debuff_duration"
+			{
+				"special_bonus_scepter"		"+6.0"
+			}
+			"damage_reduction"
+			{
+				"special_bonus_scepter"		"+12"
+			}
+			"max_stacks"
+			{
+				"special_bonus_scepter"		"+5"	
+			}
+			"attacks_increase_counter"
+			{
+				"special_bonus_scepter"		"1"
+			}
+						"helix_lifesteal"
+			{
+				"value"									"0"
+				"special_bonus_unique_axe_helix_lifesteal"	"+30"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	"pudge_rot"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"HasScepterUpgrade"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0 0 0 0"
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"rot_radius"			
+				{
+					"value"	"400"
+					"special_bonus_scepter"			"+250"
+					"affected_by_aoe_increase"	"1"
+				}
+				"rot_tick"				"0.2"
+				"rot_slow"				
+				{
+					"value"				"-14 -20 -26 -32"
+					"special_bonus_unique_pudge_4" "+-10"
+				}
+				"rot_damage"			
+				{
+					"value"			"50 100 150 200"
+					"special_bonus_scepter"		"+100"
+				}
+				"scepter_rot_regen_reduction_pct"			
+				{
+					"special_bonus_scepter"			"20"
+				}
+				"attack_damage_per_stack"
+				{
+					"special_bonus_facet_pudge_rotten_core"	"0.8 1.6 2.4 3.2"
+				}
+				"max_total_stacks"
+				{
+					"special_bonus_facet_pudge_rotten_core"	"=25"
+				}
+				"stacks_decrement_per_rot_off_tick"
+				{
+					"special_bonus_facet_pudge_rotten_core"	"=5"
+				}
+				"attack_damage_per_second_tooltip"			// attack_damage_per_stack * time_for_max_stacks_tooltip
+				{
+					"special_bonus_facet_pudge_rotten_core"	"4 8 12 16"
+				}
+				"max_bonus_damage_tooltip"					// attack_damage_per_stack * max_total_stacks
+				{
+					"special_bonus_facet_pudge_rotten_core"	"20 40 60 80"
+					"CalculateSpellDamageTooltip"			"0"
+					"DamageTypeTooltip"						"DAMAGE_TYPE_PHYSICAL"
+				}
+				"time_for_max_stacks_tooltip"				// max_total_stacks * rot_tick
+				{
+					"special_bonus_facet_pudge_rotten_core"	"=5.0"
+				}
+				"time_for_decay_tooltip"					// max_total_stacks * rot_tick / stacks_decrement_per_rot_off_tick
+				{
+					"special_bonus_facet_pudge_rotten_core"	"=1.0"
+				}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+	
+	"pudge_innate_graft_flesh"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"4"
+		"Innate"						"1"
+		"DependentOnAbility"			"pudge_dismember"
+
+		"AbilityValues"
+		{
+			"flesh_heap_strength_buff_amount"
+			{
+				"value"	"1.1 1.4 1.7 2.0"
+				"special_bonus_unique_pudge_1"	"x1.5"
+			}
+			"flesh_heap_range"		
+			{
+				"value"		"450"
+				"affected_by_aoe_increase"	"1"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+}

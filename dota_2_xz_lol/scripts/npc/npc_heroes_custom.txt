@@ -1,0 +1,88 @@
+// Dota Heroes File
+// NOTE: This is not for creating new heroes, this is for taking a currently existing hero as a template and overriding
+// the specified key-value combinations.  Use override_hero <hero_to_override> for this.
+"DOTAHeroes"
+{
+	//=================================================================================================================
+	// HERO: Templar Assassin
+	//=================================================================================================================
+	"npc_dota_hero_alchemist"
+	{
+		"Ability1"					"axe_counter_helix"		// Ability 1
+		"VisionNighttimeRange"		"5000"										// Range of vision at night time.
+	}
+	"npc_dota_hero_axe"
+	{
+	
+		"Ability1"		"axe_berserkers_call"
+		"Ability2"		"axe_battle_hunger"
+		"Ability3"		"axe_counter_helix"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"axe_culling_blade"
+		"Ability7"		"axe_coat_of_blood"
+
+		"AbilityDraftAbilities"
+		{
+			"Ability1"	"axe_berserkers_call"
+			"Ability2"	"axe_battle_hunger"
+			"Ability3"	"axe_counter_helix"
+			"Ability4"	"axe_culling_blade"
+		}
+
+		"Ability10"		"special_bonus_unique_axe_culling_blade_speed_duration"
+		"Ability11"		"special_bonus_unique_axe_8"
+		"Ability12"		"special_bonus_unique_axe"
+		"Ability13"		"special_bonus_unique_axe_7"
+		"Ability14"		"special_bonus_strength_15"
+		"Ability15"		"special_bonus_unique_axe_4"
+		"Ability16"		"special_bonus_unique_axe_2"
+		"Ability17"		"special_bonus_unique_axe_5"
+		
+		"Facets"
+		{
+			"axe_one_man_army"
+			{
+				"Icon"				"strength"
+				"Color"				"Red"
+				"GradientID"		"0"
+
+				"Abilities"
+				{
+					"Ability1"
+					{
+						"AbilityName"	"axe_one_man_army"
+					}
+				}
+			}
+			"axe_call_out"
+			{
+				"Icon"				"armor"
+				"Color"				"Red"
+				"GradientID"		"2"
+			}
+		}
+		
+		"ArmorPhysical"		"0"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"		"200"
+		"AttackDamageMax"		"300"
+		"AttackRate"		"1.200000"
+		"AttackAnimationPoint"		"0.400000"
+		"AttackAcquisitionRange"		"600"
+		"AttackRange"		"300"
+		"AttackSpeedActivityModifiers"
+		{
+			"fast"		"1200"
+		}
+		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"25"
+		"AttributeStrengthGain"		"2.8"
+		"AttributeBaseAgility"		"20"
+		"AttributeAgilityGain"		"1.7"
+		"AttributeBaseIntelligence"		"18"
+		"AttributeIntelligenceGain"		"1.6"
+		"StatusHealthRegen"		"2.5"
+		"MovementSpeed"		"315"
+    }
+}

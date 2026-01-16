@@ -1,0 +1,91 @@
+"DOTAAbilities"
+{
+	"item_blink"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"500"			// If updating this, update AbilityOvershootCastRange to 4/5 of this value
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"5.0"
+		"AbilityManaCost"				"0"
+		"AbilitySharedCooldown"			"blink"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"700"
+		"ItemShopTags"					"teleport;mobility;escape"
+		"ItemQuality"					"component"
+		//"SideShop"						"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"SuggestLategame"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"blink_range"			"500"
+			"blink_damage_cooldown"	"1.0"
+			"blink_range_clamp"		"500"
+		}
+	}
+
+	"item_recipe_blink_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaceClass"                     "item_datadriven"
+		"AbilityTextureName"            "item_recipe"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"800"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_recipe_blink_2"
+		"ItemRequirements"
+		{
+			"01"						"item_blink;item_blink"
+		}
+	}
+	"item_blink_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaceClass"                        "item_blink"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
+		"AbilityTextureName"           "bling2"
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1000"			// If updating this, update AbilityOvershootCastRange to 4/5 of this value
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"10.0"
+		"AbilityManaCost"				"0"
+		"AbilitySharedCooldown"			"bling_2"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1000"
+		"ItemShopTags"					"teleport;mobility;escape"
+		"ItemQuality"					"component"
+		//"SideShop"						"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"SuggestLategame"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"blink_range"			"1000"
+			"blink_damage_cooldown"	"3.0"
+			"blink_range_clamp"		"1000"
+		}
+	}
+}

@@ -1,0 +1,95 @@
+// Units File
+"DOTAUnits"
+{
+	"Version"	"1"
+	
+	//=================================================================================	
+	// Creature: Gnoll Assassin
+	//=================================================================================
+	"npc_dota_creature_gnoll_assassin"	
+	{
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/items/warlock/golem/ti_8_warlock_darkness_apostate_golem/ti_8_warlock_darkness_apostate_golem.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"n_creep_Ranged"
+		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
+		"Level"						"30"
+		"ModelScale" 				"3.0"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"mudgolem_cloak_aura"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"30"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"300"		// Damage range min.
+		"AttackDamageMax"			"400"		// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.6"			// Speed of attack.
+		"AttackAnimationPoint"		"0.467"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"400"		// Range within a target can be attacked.
+		"ProjectileModel"			""			// Particle system model for projectile.
+		"ProjectileSpeed"			""			// Speed of projectile.
+
+	     
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"40"
+		"HealthBarOffset"			"170"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"24"		// Experience earn.
+		"BountyGoldMin"				"100"		// Gold earned min.
+		"BountyGoldMax"				"300"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"140"		// Speed.			
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"4000"		// Base health.
+		"StatusHealthRegen"			"1.5"		// Health regeneration rate.
+		"StatusMana"				"0"			// Base mana.
+		"StatusManaRegen"			"0.0"		// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"400"		// Range of vision during day light.
+		"VisionNighttimeRange"		"400"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"						// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+			//Level Up
+			"HPGain"					"200"
+			"DamageGain"				"2"
+			"ArmorGain"					"0.25"
+			"MagicResistGain"			"0.1"
+			"MoveSpeedGain"				"1"
+			"BountyGain"				"3"
+			"XPGain"					"15"
+		}
+	}
+}

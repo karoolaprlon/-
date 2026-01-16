@@ -1,0 +1,11 @@
+"addonInfo"
+
+{
+	maps					"xyj_1_map_save_1"
+	"IsPlayable"			"1"
+	"HeroGuidesSupported"	"1"
+	"xyj_1_map_save_1"
+	{
+		"MaxPlayers"		"5"
+	}
+}

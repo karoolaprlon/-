@@ -1,0 +1,8 @@
+dota_2_test_1_map
+{
+	material materials/overviews/dota_2_test_1_map.vmat
+	pos_x -2048
+	pos_y 2048
+	scale 4.000
+}
+
