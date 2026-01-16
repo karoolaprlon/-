@@ -34,7 +34,7 @@ end
 
 function AddonMode:KillEntity(data)
 --    print('чувак здох')
---    print(data)       --//хуй!
+--    print(data)       --//хуй! crips_point
 --	  DeepPrintTable(data)
   local killed_unit = EntIndexToHScript(data.entindex_killed)
 --  print(killed_unit)  --//хуй!
@@ -46,4 +46,31 @@ end
 
 function AddonMode:AddonModeState() --не трогай мне надо для вида в консоли!
 	print('пошла возня!')
+end
+
+function AddonMode:AddonModeState()
+	--local point = Entities:FindByName(nil,"crips_point"):GetAbsOrigin()
+	--CreateUnitByName("npc_dota_creature_gnoll_assassin", point, true, nil, nil, DOTA_TEAM_BADGUYS) --работает но крип провращяется в ходячий error
+	self:VolnMobs()
+end
+
+function AddonMode:VolnMobs()
+	local point = Entities:FindByName(nil,"enemy_path1") --enemy_path1 кароч это та точка у барака где и надо спавнить крипов
+
+	for i=1,20 do
+		local unit = CreateUnitByName("npc_dota_neutral_kobold", point:GetAbsOrigin(), true, nil, nil, DOTA_TEAM_BADGUYS) --ваще найс работает 
+
+		unit:SetInitialGoalEntity(point) --кароч нашол в хамери функцыю чтоб строить маршруты крепам заебись работает 
+	end
+	print('пошла возня!!!')
+end
+
+function AddonMode:VolnMobs()
+	local point = Entities:FindByName(nil,"enemy1_path1")
+
+	for i=1,20 do
+		local unit = CreateUnitByName("npc_dota_neutral_kobold", point:GetAbsOrigin(), true, nil, nil, DOTA_TEAM_BADGUYS)
+
+		unit:SetInitialGoalEntity(point)
+	end
 end
