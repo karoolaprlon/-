@@ -55,22 +55,39 @@ function AddonMode:AddonModeState()
 end
 
 function AddonMode:VolnMobs()
-	local point = Entities:FindByName(nil,"enemy_path1") --enemy_path1 кароч это та точка у барака где и надо спавнить крипов
+	local point = Entities:FindByName(nil, "enemy_path1")
 
-	for i=1,20 do
-		local unit = CreateUnitByName("npc_dota_neutral_kobold", point:GetAbsOrigin(), true, nil, nil, DOTA_TEAM_BADGUYS) --ваще найс работает 
-
-		unit:SetInitialGoalEntity(point) --кароч нашол в хамери функцыю чтоб строить маршруты крепам заебись работает 
-	end
-	print('пошла возня!!!')
-end
-
-function AddonMode:VolnMobs()
-	local point = Entities:FindByName(nil,"enemy1_path1")
-
-	for i=1,20 do
-		local unit = CreateUnitByName("npc_dota_neutral_kobold", point:GetAbsOrigin(), true, nil, nil, DOTA_TEAM_BADGUYS)
+	for i=1,20 do 
+		local unit = CreateUnitByName("npc_dota_neutral_kobold", point:GetAbsOrigin(), true, nil,nil , DOTA_TEAM_BADGUYS)
 
 		unit:SetInitialGoalEntity(point)
 	end
+
+	Timers:CreateTimer(30, function()
+		for i=1,10 do 
+			local unit = CreateUnitByName("npc_dota_neutral_kobold", point:GetAbsOrigin(), true, nil,nil , DOTA_TEAM_BADGUYS)
+
+			unit:SetInitialGoalEntity(point)
+		end
+		return 30
+	end)
+end
+
+function AddonMode:VolnMobs()
+	local point = Entities:FindByName(nil, "enemy1_path1")
+
+	for i=1,20 do 
+		local unit = CreateUnitByName("npc_dota_neutral_kobold", point:GetAbsOrigin(), true, nil,nil , DOTA_TEAM_BADGUYS)
+
+		unit:SetInitialGoalEntity(point)
+	end
+
+	Timers:CreateTimer(30, function()
+		for i=1,10 do 
+			local unit = CreateUnitByName("npc_dota_neutral_kobold", point:GetAbsOrigin(), true, nil,nil , DOTA_TEAM_BADGUYS)
+
+			unit:SetInitialGoalEntity(point)
+		end
+		return 30
+	end)
 end

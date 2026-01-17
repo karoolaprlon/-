@@ -1,5 +1,6 @@
 
 require("addon_lol")
+require("utils/timers")
 
 function Precache( context )
 	--[[
