@@ -80,7 +80,7 @@ function AddonMode:VolnMobs()
     end
   end)
 
-  Timers:CreateTimer(90, function()
+  Timers:CreateTimer(120, function()
     for i=1,10 do 
       local unit = CreateUnitByName("npc_dota_neutral_kobold_tru", point1:GetAbsOrigin(), true, nil,nil , DOTA_TEAM_BADGUYS)
 
@@ -116,12 +116,57 @@ function AddonMode:VolnMobs()
 
       unit:SetInitialGoalEntity(point6)
     end
-    return 90
   end)
 
-  Timers:CreateTimer(250, function()
+  Timers:CreateTimer(180, function()
     for i=1,1 do
       local unit = CreateUnitByName("npc_dota_creature_gnoll_assassin", point3:GetAbsOrigin(), true, nil,nil , DOTA_TEAM_BADGUYS)
+
+      unit:SetInitialGoalEntity(point3)
+    end
+  end)
+
+  Timers:CreateTimer(300, function()
+    for i=1,10 do 
+      local unit = CreateUnitByName("npc_dota_neutral_kobold_tru_2", point1:GetAbsOrigin(), true, nil,nil , DOTA_TEAM_BADGUYS)
+
+      unit:SetInitialGoalEntity(point1)
+    end
+
+    for i=1,3 do
+      local unit = CreateUnitByName("npc_dota_neutral_jungle_stalker", point2:GetAbsOrigin(), true, nil,nil , DOTA_TEAM_BADGUYS)
+
+      unit:SetInitialGoalEntity(point2)
+    end
+
+    for i=1,10 do
+      local unit = CreateUnitByName("npc_dota_neutral_kobold_tru_2", point3:GetAbsOrigin(), true, nil,nil , DOTA_TEAM_BADGUYS)
+
+      unit:SetInitialGoalEntity(point3)
+    end
+
+    for i=1,3 do
+      local unit = CreateUnitByName("npc_dota_neutral_jungle_stalker", point4:GetAbsOrigin(), true, nil,nil , DOTA_TEAM_BADGUYS)
+
+      unit:SetInitialGoalEntity(point4)
+    end
+
+    for i=1,3 do
+      local unit = CreateUnitByName("npc_dota_neutral_jungle_stalker", point5:GetAbsOrigin(), true, nil,nil , DOTA_TEAM_BADGUYS)
+
+      unit:SetInitialGoalEntity(point5)
+    end
+
+    for i=1,10 do
+      local unit = CreateUnitByName("npc_dota_neutral_kobold_tru_2", point6:GetAbsOrigin(), true, nil,nil , DOTA_TEAM_BADGUYS)
+
+      unit:SetInitialGoalEntity(point6)
+    end
+  end)
+
+  Timers:CreateTimer(420, function()
+    for i=1,1 do
+      local unit = CreateUnitByName("npc_dota_creature_gnoll_assassin_2", point3:GetAbsOrigin(), true, nil,nil , DOTA_TEAM_BADGUYS)
 
       unit:SetInitialGoalEntity(point3)
     end
