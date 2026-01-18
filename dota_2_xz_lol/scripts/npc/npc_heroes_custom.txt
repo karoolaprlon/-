@@ -9,7 +9,7 @@
 	"npc_dota_hero_alchemist"
 	{
 		"Ability1"					"axe_counter_helix"		// Ability 1
-		"VisionNighttimeRange"		"5000"										// Range of vision at night time.
+		"VisionNighttimeRange"		"9000"										// Range of vision at night time.
 	}
 	"npc_dota_hero_axe"
 	{
@@ -86,4 +86,3 @@
 		"MovementSpeed"		"315"
     }
 }
-lolololo

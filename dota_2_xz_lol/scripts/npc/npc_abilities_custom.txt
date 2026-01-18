@@ -22,7 +22,7 @@
 		{
 			"damage"
 			{
-				"value"				"100 200 300 400"
+				"value"				"20 50 70 100"
 				"special_bonus_unique_axe_4" "+40"
 			}
 			"radius"					
@@ -30,7 +30,7 @@
 				"value"						"275"
 				"affected_by_aoe_increase"	"1"
 			}
-			"trigger_attacks"			"5 4 2 1"
+			"trigger_attacks"			"5 4 3 2"
 
 			"AbilityCooldown"
 			{

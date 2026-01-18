@@ -1,6 +1,7 @@
 
 require("addon_lol")
 require("utils/timers")
+require("Voln_Ntity/Voln_State")
 
 function Precache( context )
 	--[[

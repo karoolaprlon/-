@@ -2,7 +2,8 @@
 {
 	"npc_dota_hero_alchemist"          "1"
 	"npc_dota_hero_axe"                "1"
-	"npc_dota_hero_pudge"              "1"
+	"npc_dota_hero_furion"             "1"
 	"npc_dota_hero_sniper"             "1"
-	
+	"npc_dota_hero_bloodseeker"        "1"
+	"npc_dota_hero_drow_ranger"        "1"
 }
